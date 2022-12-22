@@ -151,7 +151,8 @@ void displayMenu() {
     cout << "5 - check the stack is empty" << endl;
     cout << "6 - show size of stack" << endl;
     cout << "7 - show how many places are empty in your stack" << endl;
-    cout << "8 - Quit" << endl;
+    cout << "8 - show the top element" << endl;
+    cout << "9 - Quit" << endl;
 }
 
 int choose() {
@@ -159,7 +160,7 @@ int choose() {
     while (true){
         cout << "enter your choose from the previous given menu : ";
         cin >> n;
-        if (n == 1 or n == 2 or n == 3 or n == 4 or n == 5 or n  == 6 or n == 7 or n == 8){
+        if (n == 1 or n == 2 or n == 3 or n == 4 or n == 5 or n  == 6 or n == 7 or n == 8 or n == 9){
             return n;
         }else{
             cout << "please enter valid input" << endl;
@@ -227,6 +228,9 @@ void manageStack(){
             cout << "there's " << hisStack.emptyPlaces() << " places are empty" << endl;
         }
         else if (n == 8){
+            cout << hisStack.top() << endl;
+        }
+        else if (n == 9){
             cout << "quit the program." << endl;
         }
         else{
